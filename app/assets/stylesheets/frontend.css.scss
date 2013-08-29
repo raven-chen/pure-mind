@@ -1,0 +1,28 @@
+#page_container{
+  width: 960px;
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
+#menu {
+  ul li{
+    float: left;
+    min-width: 100px;
+    padding: 5px;
+  }
+  .search-area {
+    float: right;
+  }
+}
+.main-image img{
+  width: 950px;
+  margin: 10px 5px;
+}
+.content .left-side {
+  width: 600px;
+  .block {
+    float: left;
+    width: 290px;
+  }
+}
