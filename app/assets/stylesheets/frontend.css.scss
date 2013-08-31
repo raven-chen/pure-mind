@@ -1,28 +1,140 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #e6e9eb url('/images/bg_main.png') repeat;
+}
+
 #page_container{
   width: 960px;
   margin: 0 auto;
+  word-break: break-all;
 }
 .clear {
   clear: both;
 }
-#menu {
-  ul li{
+
+#header {
+  #menu {
     float: left;
-    min-width: 100px;
-    padding: 5px;
+
+    ul {
+      padding-left: 0;
+
+      li{
+        float: left;
+        margin: 0 10px;
+        padding: 5px;
+        list-style-type: none;
+      }
+    }
+
   }
   .search-area {
     float: right;
+    padding-top: 20px;
   }
 }
 .main-image img{
   width: 950px;
   margin: 10px 5px;
 }
-.content .left-side {
-  width: 600px;
-  .block {
+#page .content {
+  .left-side {
+    width: 740px;
     float: left;
-    width: 290px;
+
+    .block {
+      float: left;
+      width: 348px;
+      border: 1px solid #CCC;
+      margin-right: 20px;
+      margin-bottom: 20px;
+
+      .block-head {
+        border-bottom: 1px solid #CCC;
+
+        p {
+          background: url(/assets/arrow.png) no-repeat 2% 40%;
+          padding: 5px 0 5px 25px;
+          margin: 0;
+        }
+      }
+
+      .block-body {
+        padding: 10px;
+
+        .image-area {
+          float: left;
+          img {
+            width: 100px;
+          }
+        }
+
+        .text-area {
+          width: 180px;
+          float: left;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .right-side {
+    width: 210px;
+    float: left;
+    border: 1px solid #CCC;
+
+    .qq {
+      height: 20px;
+      line-height: 20px;
+      border-bottom: 1px solid #CCC;
+      padding: 10px;
+
+      p {
+        font-weight: bold;
+        color: red;
+        font-size: 18px;
+        margin: 0;
+        float: left;
+        margin-left: 5px;
+      }
+
+      label {
+        font-size: 14px;
+        float: left;
+      }
+    }
+
+    .two-dimensional-code {
+      padding: 10px;
+      img {
+        width: 90px;
+        float: left;
+      }
+
+      p {
+        float: left;
+        margin: 0;
+        display: block;
+        width: 90px;
+        font-size: 12px;
+        padding: 10px 0 0 5px;
+      }
+    }
+
+    .subscribe {
+      padding: 10px;
+      border-top: 1px solid #CCC;
+
+      label {
+        font-size: 12px;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input[type="text"] {
+        width: 125px;
+      }
+    }
   }
 }
+

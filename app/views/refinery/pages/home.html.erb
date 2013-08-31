@@ -1,28 +1,42 @@
 <div class="main-image"><%= image_tag("main_image.jpg") %></div>
 <div class="content">
   <div class="left-side">
-    <% 4.times.each do |i| -%>
+    <% (1..4).each do |i| -%>
     <div class="block">
       <div class="block-head">
-        双盘共修召集
+        <%= raw @page.content_for("block #{i} title")%>
       </div>
       <div class="block-body">
         <div class="image-area">
           <%= image_tag("zen1.jpg") %>
         </div>
         <div class="text-area">
-          双盘是一种简单直接但效果强劲的调节身体内脏，达到补充肾气，矫正脊椎，滋养骨髓的修炼方式
+          <%= raw @page.content_for("block #{i}")%>
         </div>
       </div>
     </div>
-    <%= content_tag(:div, nil, :class => "clear") if i == 1 %>
+    <%= content_tag(:div, nil, :class => "clear") if i == 2 %>
     <% end -%>
   </div>
   <div class="right-side">
-    <%= render '/refinery/content_page' %>
-    <div class="qq"></div>
-    <div class="two-dimensional-code"></div>
-    <div class="subscribe"></div>
-    <div class="tags"></div>
+    <div class="qq"><label>思无邪ＱＱ群:</label><%= raw @page.content_for("qq") %></div>
+    <div class="two-dimensional-code">
+      <%= image_tag("fake_two_dimensional_code.jpg") %>
+      <p>扫描左侧二维码或在微信中搜索, 添加"思无邪",　即可获得最新活动信息</p>
+      <div class="clear"></div>
+    </div>
+    <div class="subscribe">
+      <label>思无邪电子邮件订阅</label>
+      <div>
+        <%= text_field_tag "subscribe" %>
+        <%= submit_tag "订阅" %>
+      </div>
+    </div>
   </div>
+
+  <div class="tags">
+    <%= raw @page.content_for("tags") %>
+  </div>
+
+  <div class="clear"></div>
 </div>
