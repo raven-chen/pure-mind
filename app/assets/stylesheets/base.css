@@ -419,3 +419,6 @@ a:hover {
   color: #00256F;
   text-decoration: underline;
 }
+p {
+  margin: 0;
+}

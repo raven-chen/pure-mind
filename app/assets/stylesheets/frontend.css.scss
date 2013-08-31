@@ -136,5 +136,16 @@ html {
       }
     }
   }
+  .tags {
+    float: left;
+    width: 190px;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+    padding: 10px;
+
+    a {
+      font-size: 12px;
+    }
+  }
 }
 
