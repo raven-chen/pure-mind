@@ -3,20 +3,24 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <head>
     <%= render "/refinery/head" %>
+    <%= javascript_include_tag "application" %>
   </head>
   <body id="<%= canonical_id @page %>">
     <% #site_bar -%>
-    <div id="page_container">
+    <div id="body-wrapper">
       <header id="header">
         <%= render "/refinery/header" -%>
       </header>
-      <section id="page">
+
+      <div class="clearfix"><!--start body-wrapper-->
         <%= yield %>
-      </section>
+      </div><!--end-body wrapper-->
+
       <footer>
         <%= render "/refinery/footer" -%>
       </footer>
     </div>
-    <%= render "/refinery/javascripts" %>
+    <%# render "/refinery/javascripts" %>
+
   </body>
 </html>

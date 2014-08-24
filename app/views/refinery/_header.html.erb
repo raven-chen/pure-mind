@@ -1,10 +1,8 @@
-<h1 id='logo'>
-  <%= link_to image_tag("logo.gif"), refinery.root_path, :title => Refinery::Core.site_name %>
-</h1>
-<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+<div class="header">
+  <div id="logo">
+    <%= link_to image_tag("logo.gif"), refinery.root_path, :title => Refinery::Core.site_name %>
+    <!--<span>Free HTML5 Template</span>-->
+  </div>
 
-<div class="search-area">
-  <%= text_field_tag "search" %>
-  <%= submit_tag "搜索" %>
+  <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
 </div>
-<div class="clear"></div>
