@@ -1,7 +1,11 @@
 #body-wrapper {
-  width:960px;
-  margin:0 auto;
-  padding:5px 0;
+  width: 990px;
+  margin: 40px auto 50px;
+  padding: 0 30px;
+  background: #FFF;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
 }
 
 body, input, textarea {
@@ -27,6 +31,15 @@ body, input, textarea {
   margin-bottom: 20px;
   float: left;
 }
+.one_third {
+  h3.block-title {
+    font-weight: bold;
+  }
+  .image-box img {
+    width: 100%;
+    height: 200px;
+  }
+}
 
 .column-last {
   margin-right: 0!important;
@@ -41,8 +54,7 @@ body, input, textarea {
   visibility:hidden;
 }
 
-.box {
-  border-top: 1px solid #CCC;
+.block-main-title {
   float: left;
   margin: 10px 0 30px;
   padding-top: 20px;
@@ -77,8 +89,6 @@ body, input, textarea {
 
 }
 
-
-
 h1 + p, h2 + p, h3 + p{
   margin-top: -10px;
 }
@@ -102,11 +112,18 @@ h3 {
 }
 
 .header {
-  // background: url("#") repeat-x scroll left top transparent;
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
+  padding: 40px 0;
+  border-bottom: 4px solid #212121;
+  position: relative;
+
+  .site-info-menu {
+    float: right;
+  }
+
+  .top-info {
+    position: absolute;
+    right: 0;
+  }
 }
 
 #logo {
@@ -116,28 +133,78 @@ h3 {
 }
 
 #menu {
-  margin-top: 17px;
+  margin-top: 30px;
 
-  a {
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid #d3d4d6;
-    transition: color 0.1s linear;
-    -moz-transition: color 0.1s linear;
-    -webkit-transition: color 0.1s linear;
-    -o-transition: color 0.1s linear;
+  ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 15px 4px 17px 0;
+    list-style: none;
 
-    &:hover {
-      color: #F34B47;
+    li {
+      font: bold 12px/18px sans-serif;
+      display: inline-block;
+      margin-right: -4px;
+      position: relative;
+      padding: 15px 20px;
+      background: #fff;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+
+      &:hover {
+        a {
+          color: #FF4E00;
+        }
+
+        ul {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      ul {
+        padding: 0;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 150px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+
+        li {
+          background: #555;
+          display: block;
+          color: #fff;
+          text-shadow: 0 -1px 0 #000;
+          a {
+            color: #fff !important;
+          }
+          &:hover {
+            background: #666;
+            a {
+              color: #FFF;
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
   }
-}
-
-.menu, .menu * {
-  float: right;
-  list-style: none outside none;
-  margin: 10px;
-  padding: 0;
 }
 
 #footer-main {
@@ -171,11 +238,11 @@ h3 {
   padding-left:20px;
 }
 
-.fancy {
-  a img {
+.image-box {
+  img {
     border: 1px solid #BBB;
     padding: 2px;
-    margin: 10px 20px 10px 0;
+    margin: 10px 0;
     vertical-align: top;
 
     &.last {
@@ -186,8 +253,8 @@ h3 {
 
 .one_fourth {
   img {
-   width: 196px;
-   height: 266px;
+   width: 100%;
+   height: 166px;
   }
 
   ul.footer-list {
@@ -206,6 +273,8 @@ h3 {
 #slider {
   position: relative;
   overflow: auto;
+  margin-bottom: 40px;
+
   ul {
     padding-left: 0;
 
@@ -214,4 +283,8 @@ h3 {
       float: left;
     }
   }
+}
+.separate-line {
+  height: 11px;
+  border-top: 1px dotted #CCC;
 }
