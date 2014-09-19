@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-  <%= render "/refinery/html_tag" %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+<html>
   <head>
-    <%= render "/refinery/head" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
   </head>
-  <body id="<%= canonical_id @page %>">
-    <% #site_bar -%>
+  <body>
     <div id="body-wrapper">
       <header id="header">
-        <%= render "/refinery/header" -%>
+        <%= render "layouts/header" -%>
       </header>
 
       <div class="clearfix"><!--start body-wrapper-->
@@ -17,10 +15,8 @@
       </div><!--end-body wrapper-->
 
       <footer>
-        <%= render "/refinery/footer" -%>
+        <%= render "layouts/footer" -%>
       </footer>
     </div>
-    <%# render "/refinery/javascripts" %>
-
   </body>
 </html>
