@@ -1,0 +1,52 @@
+<div id="slider" style="padding-top:40px;">
+  <ul>
+    <li><%= image_tag(asset_path("poster1.jpg")) %></li>
+    <li><%= image_tag(asset_path("poster2.jpg")) %></li>
+  </ul>
+</div>
+
+<div class="clearfix"></div>
+<div class="separate-line"></div>
+
+<!-- 恢复案例 -->
+<div class="block-main-title">
+  <h1>恢复案例</h1>
+</div>
+
+<div class="one_fourth">
+  <div class="image-box">
+    <%= image_tag("http://www.siwuxie.org/wp-content/uploads/2014/09/anliwenjiafm-225x130.png") %>
+  </div>
+  <p>文佳</p>
+</div>
+<div class="one_fourth">
+  <div class="image-box">
+    <%= image_tag("http://www.siwuxie.org/wp-content/uploads/2014/08/alzq-225x130.png") %>
+  </div>
+  <p>自强不息</p>
+</div>
+<div class="one_fourth">
+  <div class="image-box">
+    <%= image_tag("http://www.siwuxie.org/wp-content/uploads/2014/08/alce-225x130.png") %>
+  </div>
+  <p>诚恩</p>
+</div>
+<div class="one_fourth column-last">
+  <div class="image-box">
+    <%= image_tag("http://www.siwuxie.org/wp-content/uploads/2014/07/alalpng-225x130.png") %>
+  </div>
+  <p>阿林</p>
+</div>
+<!-- end of 恢复案例 -->
+
+<div class="clearfix"></div>
+<div class="separate-line"></div>
+
+<script type="text/javascript">
+  $(window).load(function() {
+    $("#slider").unslider({
+      slideWidth: 990,
+      slideMargin: 0
+    });
+  });
+</script>

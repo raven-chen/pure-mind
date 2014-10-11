@@ -1,5 +1,10 @@
 PureMind::Application.routes.draw do
-  root :to => "site#index"
+  devise_for :admins
+  root :to => "home#index"
+
+  namespace :admin do
+    root :to => "site#index"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
